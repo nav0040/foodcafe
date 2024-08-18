@@ -2,12 +2,12 @@ import { View, Text, Pressable, Image } from 'react-native'
 import React from 'react'
 import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { LinearGradient } from 'expo-linear-gradient';
+import { router } from 'expo-router';
 
 const RecipesCard = ({item,index,navigation}) => {
 
     const isEven = index % 2 === 0;
-    // console.log(item.item.strMeal);
-// console.log(item );
+
 
     
 
@@ -19,7 +19,7 @@ const RecipesCard = ({item,index,navigation}) => {
         paddingLeft:isEven ? 8 :0,
        }}
        className="flex justify-center mb-4 space-y-1"
-       onPress={()=> navigation.navigate("RecipeDetails",{ ...item })}
+       onPress={()=> router.push(`/recipe/${item.idMeal}`,{ ...item })}
       >
         <Image
          source={{

@@ -7,6 +7,8 @@ const RootLayout = () => {
     <Stack >
       <Stack.Screen name='index' options={{ headerShown:false}} />
       <Stack.Screen name='home' options={{ headerShown:false}} />
+      <Stack.Screen name='recipe/[id]' options={{ headerShown:false}} />
+
     </Stack>
   )
 }
